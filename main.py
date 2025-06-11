@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routes import dynamic
-from .storage.route_store import RouteStore
+from routes import dynamic
+from storage.route_store import RouteStore
 
 app = FastAPI(
     title="Gradio Router API",
@@ -38,4 +38,9 @@ async def root():
             "use_route": "POST /api/{route_name}",
             "delete_route": "DELETE /api/{route_name}"
         }
-    } 
+    }
+
+# ✅ Run with `python main.py`
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

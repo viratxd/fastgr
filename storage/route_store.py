@@ -8,7 +8,7 @@ class RouteStore:
         if storage_path is None:
             # Get the project root directory (where gradio_router_app is located)
             project_root = Path(__file__).parent.parent.parent
-            self.storage_path = str(project_root / "gradio_router_app" / "data" / "routes.json")
+            self.storage_path = "./data/routes.json"
         else:
             self.storage_path = storage_path
         self._ensure_storage_exists()

@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Request
 from typing import Dict, Any
-from ..models.schema import RouteConfig, GradioInput
-from ..services.gradio_manager import GradioManager
-from ..storage.route_store import RouteStore
+from models.schema import RouteConfig, GradioInput
+from services.gradio_manager import GradioManager
+from storage.route_store import RouteStore
 
 router = APIRouter()
 gradio_manager = GradioManager()

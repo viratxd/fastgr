@@ -1,8 +1,8 @@
 [
   {
-    "route": "chat",
+    "route": "chat1",
     "gradio_space": "yuntian-deng/ChatGPT",
     "api_name": "/predict",
-    "output_type": "json"
+    "output_type": "txt"
   }
 ]
